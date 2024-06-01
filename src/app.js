@@ -1,5 +1,7 @@
 const express = require("express");
 const cors = require("cors");
+const dotenv=require("dotenv");
+dotenv.config()
 const httpStatus = require("http-status");
 const routes = require("./routes/api");
 const { errorHandler } = require("./middlewares/error");
@@ -7,8 +9,6 @@ const ApiError=require("./utils/ApiError")
 const { jwtStrategy } = require("./config/passport");
 const helmet = require("helmet");
 const passport = require("passport");
-const dotenv=require("dotenv");
-dotenv.config()
 
 const app = express();
 // console.log(process.env.PORT)
